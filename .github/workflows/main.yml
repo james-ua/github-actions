@@ -10,12 +10,10 @@ jobs:
       - uses: actions/checkout@main
      
       - name: Find and Replace
-        uses: thiagodnf/string-replacer@v1.0.2
+        uses: richardrigutins/replace-in-files@v2
         with:
-          find: "hello"
-          replace: "world"
-          include: |
-            ./*.py
-          exclude: |
-            .git/**
-            node_modules/**
+          files: '**/*.py'
+          search-text: 'hello'
+          replacement-text: 'world'
+          encoding: 'utf8'
+          max-parallelism: 10
