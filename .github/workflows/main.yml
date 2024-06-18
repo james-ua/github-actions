@@ -15,7 +15,7 @@ jobs:
           find: "hello"
           replace: "world"
           include: |
-            /*.py
+            ./*.py
           exclude: |
             .git/**
             node_modules/**
