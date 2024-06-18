@@ -1,0 +1,21 @@
+name: My Workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     
+      - uses: actions/checkout@main
+     
+      - name: Find and Replace
+        uses: thiagodnf/string-replacer@v1.0.2
+        with:
+          find: "hello"
+          replace: "world"
+          include: |
+            *.py
+          exclude: |
+            .git/**
+            node_modules/**
