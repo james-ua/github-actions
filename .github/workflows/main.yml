@@ -12,7 +12,7 @@ jobs:
       - name: Find and Replace
         uses: richardrigutins/replace-in-files@v2
         with:
-          files: '**/*.py'
+          files: '**/*.md'
           search-text: 'hello'
           replacement-text: 'world'
           encoding: 'utf8'
