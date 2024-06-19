@@ -4,3 +4,4 @@ Hello
 hello
 HELLO
 0
+{0}
