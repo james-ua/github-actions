@@ -34,11 +34,11 @@ jobs:
           GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
           GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
         shell: bash
-        run: 
-                git config --local user.name actions-user
-                git config --local user.email "actions@github.com"
+        run: |
+                git config --local user.name "$GIT_USER_NAME"
+                git config --local user.email "$GIT_USER_EMAIL"
                 if ! git diff --exit-code; then
-                    git add your/files/here
+                    git add .
                     git commit -am "GH Action Files added $(date)"
                     git push -f origin main
                 fi
