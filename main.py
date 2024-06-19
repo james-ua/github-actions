@@ -5,5 +5,5 @@ sys.path.append(os.path.abspath('/Workspace/Scripts/CDP_EMEA/dp-n01-cdp-emea-con
 import cbrep_mappings_new as mapping
 
 a = mapping.utils('hello')
-d = mapping.utils('Hello')
+d = mapping.utils('hellohello')
 print(a,d)
