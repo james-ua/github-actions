@@ -14,10 +14,10 @@ jobs:
       - name: Replace multiple files
         uses: richardrigutins/replace-in-files@v2
         with:
-          files: '**/*.md'
+          files: '**/*.*'
           search-text: 'hello'
           replacement-text: 'world'
-          exclude: 'node_modules/**'
+          exclude: '.github/**'
           encoding: 'utf8'
           max-parallelism: 10
       
